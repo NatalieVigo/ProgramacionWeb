@@ -1,0 +1,22 @@
+.usuario-detalle {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.usuario-detalle .info p {
+  margin-bottom: 0.4rem;
+}
+
+.usuario-detalle table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.usuario-detalle th,
+.usuario-detalle td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
