@@ -3,7 +3,7 @@ import { useUser } from '../../context/UserContext'
 import { useNavigate, Link } from 'react-router-dom'
 import usuarios from '../../data/usuarios.json'
 import categorias from '../../data/categorias.json'
-import './AdminDashboard.css'
+import './CategoriasAdmin.css'
 
 const AdminDashboard = () => {
   const { usuario } = useUser()
@@ -118,14 +118,16 @@ const AdminDashboard = () => {
       <hr style={{ margin: '2rem 0' }} />
 
       <h3>Categorías Registradas</h3>
-      <div style={{ marginBottom: '1rem' }}>
-        <Link to="/admin/categorias" style={{ marginRight: '1rem', color: '#0077cc' }}>
-          Ver Categorías
-        </Link>
-        <Link to="/admin/categorias/nuevo" style={{ color: '#0077cc' }}>
-          + Añadir Categoría
-        </Link>
+      <div className="botones-categorias">
+        <Link to="/admin/categorias" className="btn-ver">Ver Categorías</Link>
+        <Link to="/admin/categorias/nuevo" className="btn-nueva">+ Añadir Categoría</Link>
       </div>
+
+      <ul className="lista-categorias-mini">
+        {categorias.slice(0, 5).map(cat => (
+          <li key={cat.id}>{cat.nombre}</li>
+        ))}
+      </ul>
     </section>
   )
 }
