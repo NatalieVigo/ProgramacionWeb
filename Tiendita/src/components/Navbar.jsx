@@ -36,7 +36,7 @@ const Navbar = () => {
 
       <div className="navbar__actions">
         <Link to="/carrito">Carrito 🛒</Link>
-        <Link to="/cuenta">Cuenta 👤</Link>
+        <Link to="/login">Cuenta 👤</Link>
       </div>
     </header>
   )

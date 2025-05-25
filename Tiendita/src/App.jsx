@@ -11,6 +11,8 @@ import SearchResults from './pages/SearchResults'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import PedidoCompletado from './pages/PedidoCompletado'
+import Login from './pages/Login.jsx'
+import Cuenta from './pages/Cuenta.jsx'
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="carrito" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="pedido-completado" element={<PedidoCompletado />} />
+          <Route path="login" element={<Login />} />
+          <Route path="cuenta" element={<Cuenta />} />
         </Route>
       </Routes>
     </Router>

@@ -23,3 +23,15 @@
   background: #eebbc3;
   color: #232946;
 }
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #263246;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.logout-btn:hover {
+  text-decoration: underline;
+}
