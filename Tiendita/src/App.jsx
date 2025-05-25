@@ -8,7 +8,9 @@ import CategoryProducts from './pages/CategoryProducts.jsx'
 import About from './pages/About.jsx'
 import ProductDetail from './pages/ProductDetail.jsx'
 import SearchResults from './pages/SearchResults'
-
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import PedidoCompletado from './pages/PedidoCompletado'
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
           <Route path="categorias" element={<CategoryLanding />} />
           <Route path="category/:nombre" element={<CategoryProducts />} />
           <Route path="nosotros" element={<About />} />
-
+          <Route path="carrito" element={<Cart />} />
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="pedido-completado" element={<PedidoCompletado />} />
         </Route>
       </Routes>
     </Router>
