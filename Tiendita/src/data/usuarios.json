@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombre": "Steven",
+    "apellido": "De la Cruz",
+    "correo": "steven@tienda.com",
+    "password": "1234",
+    "ordenes": [
+      {
+        "id": 101,
+        "fecha": "2025-05-27",
+        "estado": "Enviado",
+        "total": 159.90
+      }
+    ]
+  }
+]

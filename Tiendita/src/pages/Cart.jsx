@@ -3,6 +3,8 @@ import { useCarrito } from '../context/CarritoContext'
 import { Link } from 'react-router-dom'
 import './Cart.css'
 
+// aaa
+
 const Cart = () => {
   const {
     carrito,
