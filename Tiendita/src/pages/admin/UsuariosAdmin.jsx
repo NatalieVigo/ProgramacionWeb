@@ -38,7 +38,7 @@ const UsuariosAdmin = () => {
             <th>Nombre</th>
             <th>Correo</th>
             <th>Estado</th>
-            <th>AcciÃ³n</th>
+            <th>Acción</th>
             <th>Detalle</th>
           </tr>
         </thead>
