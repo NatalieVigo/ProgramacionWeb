@@ -15,9 +15,15 @@ import Login from './pages/Login.jsx'
 import Cuenta from './pages/Cuenta.jsx'
 import Registro from './pages/Registro.jsx'
 import RecuperarPassword from './pages/RecuperarPassword.jsx'
+
+
 import AdminDashboard from './pages/admin/AdminDashboard'
 import UsuariosAdmin from './pages/admin/UsuariosAdmin'
 import UsuarioDetalle from './pages/admin/UsuarioDetalle'
+import AgregarCategoria from './pages/admin/AgregarCategoria'
+import CategoriasAdmin from './pages/admin/CategoriasAdmin'
+
+
 function App() {
   return (
     <Router>
@@ -37,9 +43,14 @@ function App() {
           <Route path="cuenta" element={<Cuenta />} />
           <Route path="registro" element={<Registro />} />
           <Route path="recuperar-password" element={<RecuperarPassword />} />
+
+        
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/usuarios" element={<UsuariosAdmin />} />
           <Route path="/admin/usuarios/:id" element={<UsuarioDetalle />} />
+          <Route path="/admin/categorias" element={<CategoriasAdmin />} />
+          <Route path="/admin/categorias/nuevo" element={<AgregarCategoria />} />
+
         </Route>
       </Routes>
     </Router>
