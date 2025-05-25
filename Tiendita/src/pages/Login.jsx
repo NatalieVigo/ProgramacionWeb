@@ -9,15 +9,22 @@ const Login = () => {
 
   const [correo, setCorreo] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (!correo || !password) {
+      setError('Debes ingresar correo y contraseña.')
+      return
+    }
+
     const ok = login(correo, password)
     if (ok) {
+      setError('')
       navigate('/cuenta')
     } else {
-      setError(true)
+      setError('Correo o contraseña incorrectos, o usuario inactivo.')
     }
   }
 
@@ -41,7 +48,7 @@ const Login = () => {
         <button type="submit">Ingresar</button>
       </form>
 
-      {error && <p className="error">Correo o contraseña incorrectos</p>}
+      {error && <p className="error">{error}</p>}
 
       <div className="login-links">
         <Link to="/recuperar-password">Olvidé mi contraseña</Link>

@@ -15,7 +15,9 @@ import Login from './pages/Login.jsx'
 import Cuenta from './pages/Cuenta.jsx'
 import Registro from './pages/Registro.jsx'
 import RecuperarPassword from './pages/RecuperarPassword.jsx'
-
+import AdminDashboard from './pages/admin/AdminDashboard'
+import UsuariosAdmin from './pages/admin/UsuariosAdmin'
+import UsuarioDetalle from './pages/admin/UsuarioDetalle'
 function App() {
   return (
     <Router>
@@ -35,6 +37,9 @@ function App() {
           <Route path="cuenta" element={<Cuenta />} />
           <Route path="registro" element={<Registro />} />
           <Route path="recuperar-password" element={<RecuperarPassword />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/usuarios" element={<UsuariosAdmin />} />
+          <Route path="/admin/usuarios/:id" element={<UsuarioDetalle />} />
         </Route>
       </Routes>
     </Router>

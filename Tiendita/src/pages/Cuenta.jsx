@@ -7,14 +7,19 @@ const Cuenta = () => {
   const { usuario } = useUser()
   const navigate = useNavigate()
 
-  // Si no está logueado, redirige al login
+  // Redirige si no está logueado
   useEffect(() => {
     if (!usuario) {
       navigate('/login')
     }
+
+    // Redirige a /admin si es administrador
+    if (usuario?.rol === 'admin') {
+      navigate('/admin')
+    }
   }, [usuario, navigate])
 
-  if (!usuario) return null
+  if (!usuario || usuario.rol === 'admin') return null
 
   return (
     <section className="cuenta">
